@@ -4,8 +4,6 @@
 
 services:
   nextcloud-aio-mastercontainer:
-    volumes:
-      # Add your host video library inside the container at /mnt/jellyfin-video
-      # - /tank/docker/data/jellyfin/video:/mnt/jellyfin-video:rw
-      # Immich uploads (read-only)
-      - /tank/docker/data/immich/library/upload:/mnt/immich-uploads:ro
+    environment:
+      # Allow this host path (and anything below it) to be used as "Local" external storage
+      NEXTCLOUD_MOUNT: "/tank/docker/data/immich/library"
