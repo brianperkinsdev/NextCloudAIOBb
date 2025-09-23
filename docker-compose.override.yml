@@ -2,8 +2,6 @@
 # Place this in the same directory as your Nextcloud AIO docker-compose.yml
 # Then apply with:  docker compose up -d
 
-version: "3.8"
-
 services:
   nextcloud-aio-mastercontainer:
     volumes:
