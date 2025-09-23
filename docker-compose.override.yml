@@ -1,0 +1,13 @@
+# docker-compose.override.yml
+# Place this in the same directory as your Nextcloud AIO docker-compose.yml
+# Then apply with:  docker compose up -d
+
+version: "3.8"
+
+services:
+  nextcloud-aio-mastercontainer:
+    volumes:
+      # Add your host video library inside the container at /mnt/jellyfin-video
+      # - /tank/docker/data/jellyfin/video:/mnt/jellyfin-video:rw
+      # Immich uploads (read-only)
+      - /tank/docker/data/immich/library/upload:/mnt/immich-uploads:ro
